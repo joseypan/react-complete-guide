@@ -10,9 +10,12 @@ function App() {
     { title: "Car Insurance", amount: 296.67, date: new Date(2021, 2, 12) },
     { title: "Car Insurance", amount: 296.67, date: new Date(2021, 2, 12) },
   ];
+  const newExpenseHandler = (newExpense) => {
+    console.log("newExpense in Appjs", newExpense);
+  };
   return (
     <div className="App">
-      <NewExpense />
+      <NewExpense onNewExpense={newExpenseHandler} />
       <Expenses expenses={expenses} />
     </div>
   );
