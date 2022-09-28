@@ -1,5 +1,5 @@
 import "./NewExpanseForm.css";
-import { useState } from "react";
+import React, { useState } from "react";
 const NewExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
