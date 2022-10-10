@@ -1,4 +1,5 @@
 import "./ExpensesFilter.css";
+import React from "react";
 const ExpensesFilter = (props) => {
   const selectChangeHandler = (e) => {
     props.onFilterChange(e.target.value);
