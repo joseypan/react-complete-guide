@@ -1,9 +1,17 @@
 import "./NewExpanseForm.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const NewExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  useEffect(() => {
+    setTimeout(() => {
+      console.log("check for validate");
+    }, 500);
+    return () => {
+      console.log("clean up");
+    };
+  }, [enteredAmount, enteredDate, enteredTitle]);
   const titleChangeHandler = (e) => {
     setEnteredTitle(e.target.value);
   };
